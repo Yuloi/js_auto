@@ -15,12 +15,20 @@ function moveObject(object1,object2) { // src <String> dest <String> Note: When 
 function copyObject(obj1,obj2) {
     fse.copySync(obj1,obj2);
 };
-function emptyFolder(dir) { //empty folder, if folder doesn't exist create empty folder 
-    fse.emptyDirSync(dir);
-}
-function removeObject(path) { // remove dir or file, if path doesnt exist do nothing
-    fse.removeSync(path);
-}
+function loopEmptyFolders () {
+    let i = 0;
+    let leng = folders.length;
+    for (i; i < leng; i++) {
+        fse.emptyDirSync(folders[i]);
+    };
+};
+function loopRemoveObjects () {
+    let i = 0;
+    let leng = folders.length;
+    for (i; i < leng; i++) {
+        fse.removeSync(folders[i]);
+    };
+};
 
 createFolder(folders[0]);
 createFile(folders[0] + file);
@@ -28,5 +36,5 @@ createFolder(folders[1]);
 moveObject(folders[0] + file, folders[1] + file);
 createFolder(folders[2]);
 copyObject(folders[1] + file, folders[2] + file);
-emptyFolder(folders[1]);
-removeObject(folders[0]);
+loopEmptyFolders();
+loopRemoveObjects();
