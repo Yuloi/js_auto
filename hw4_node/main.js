@@ -1,8 +1,6 @@
 const fse =  require('fs-extra');
 
-let firstFolder = './firstFolder';
-let secondFolder = './secondFolder';
-let thirdFolder = './thirdFolfer';
+const folders = ['./firstFolder', './secondFolder', './thirdFolfer'];
 let file = '/newfile.txt';
 
 function createFolder(folderName) { // function for creating folders
@@ -24,11 +22,11 @@ function removeObject(path) { // remove dir or file, if path doesnt exist do not
     fse.removeSync(path);
 }
 
-createFolder(firstFolder);
-createFile(firstFolder + file);
-createFolder(secondFolder);
-moveObject(firstFolder + file, secondFolder + file);
-createFolder(thirdFolder);
-copyObject(secondFolder + file, thirdFolder + file);
-emptyFolder(secondFolder);
-removeObject(firstFolder);
+createFolder(folders[0]);
+createFile(folders[0] + file);
+createFolder(folders[1]);
+moveObject(folders[0] + file, folders[1] + file);
+createFolder(folders[2]);
+copyObject(folders[1] + file, folders[2] + file);
+emptyFolder(folders[1]);
+removeObject(folders[0]);
