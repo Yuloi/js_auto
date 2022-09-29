@@ -10,8 +10,8 @@ function addition (a, b) {
             console.log (`Addition for ${a} and ${b} is ${a+b}`);  //add caase for Nan
             break;
         case 'boolean':
-            b = new Number(b);
-            if (b === NaN){
+            b = new Number(Newb);
+            if (Newb === NaN){
                 console.log(`${b}`)
             }
             console.log (`Addition for ${a} and ${b} is ${a+b}`);
