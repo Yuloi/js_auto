@@ -1,6 +1,5 @@
 /*
 This programm works only with boolean, string or number type
-issues: a === ''
 */
 function addition(a, b) {
     let numA = Number(a);
@@ -48,7 +47,7 @@ function multiply(a, b) {
         console.log(`Multiplying for ${a} and ${b} is ${a * b}`)
     };
 
-}
+};
 function divide(a, b) {
     let numA = Number(a);
     let numB = Number(b);
@@ -62,8 +61,27 @@ function divide(a, b) {
         console.log(`Division for ${a} and ${b} is ${a / b}`)
     };
 
+};
+function toNumber(a) {
+    let newA = Number(a);
+    if (isNaN(newA) === true){
+        console.log(`Can't be converted to number`)
+    }else{
+        console.log(newA);
+    }
+};
+function toString (a) {
+    let newA = String(a);
+    console.log(newA);
+};
+function toBoolean (a){
+    let newA = Boolean(a);
+    console.log(newA);
 }
-addition(false, '45'); // fix issue where a === '' + false 
+
+addition(false, '45.4'); // fix issue where a === '' + false 
 multiply('45', false);
 divide('45', false);
-
+toNumber(false);
+toString('false');
+toBoolean('');
