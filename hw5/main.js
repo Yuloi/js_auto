@@ -1,9 +1,19 @@
+/*
+This programm works only with boolean, string or number type
+issues: a === ''
+*/
 function addition (a, b) {
-    let typeA = typeof a;
+    let numA = Number(a);
+    let typeA;
+    if (isNaN(numA) === true){
+        typeA =  typeof a;
+    }else{
+        a = numA;
+        typeA = typeof a;
+    };
     switch (typeA){
         case 'string':
             b =  String(b);
-            console.log(b)
             console.log (`Addition for ${a} and ${b} is ${a+b}`);
             break;
         case 'number':
@@ -24,4 +34,22 @@ function addition (a, b) {
             break;
     };
 };
-addition(0, false);
+
+function multiply (a, b){
+    let numA = Number(a);
+    let numB = Number(b);
+    if (isNaN(numA) === true || isNaN(numB) === true){
+        //typeA = typeof a;
+        console.log(`Multiplying can't be performed, values can't be converted into numbers`);
+
+    }else{
+        a = numA
+        b = numB
+        console.log (`Multiplying for ${a} and ${b} is ${a * b}`)
+    };
+
+}
+
+//addition('true', ''); // fix issue where a === '' + false 
+//multiply('44', 6)
+
