@@ -1,4 +1,5 @@
-//task 1
+//task 1 - update code afterwards
+
 function randomNumber (){
     let min = 1;
     let max = 6;
@@ -16,6 +17,7 @@ function playRounds(person1,person2){
     }
     return [person1, person2];
 };
+
 function compareSum(){
     const players = playRounds(0,0);
     if (players[0] === players[1]){
@@ -26,4 +28,10 @@ function compareSum(){
         console.log(`Player 2 won with total score: ${players[1]}`);
     };
 };
+
+// task 2
+const date = new Date();
+let d = date.getFullYear();
+console.log(d);
+
 module.exports.game = compareSum;
