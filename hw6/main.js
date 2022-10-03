@@ -31,7 +31,7 @@ function divisionTill50 (n){
         n = n/2;
     }
     console.log(`Last value for division is ${n}, it will be done for ${num} interactions`);
-}
+};
 // task 3
 function averageValue (n){
     const arr = n;
@@ -39,8 +39,14 @@ function averageValue (n){
         return previousValue + currentValue
     });
     console.log(`Average value for ${arr} is ${newArr/arr.length}`);
-}
+};
+// task 6
+function sortArr(arr){
+    arr.sort(function(a,b){return a - b});
+    console.log(arr);
+};
 
 module.exports.sum = sum;
 module.exports.divisionTill50 = divisionTill50;
 module.exports.averageValue = averageValue;
+module.exports.sortArr = sortArr;
