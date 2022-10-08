@@ -1,5 +1,6 @@
 .DS_Store
 **/.DS_Store
 **/.DS_Store
-**/hw4_node/node_modules
 .vscode
+**/package.json
+**/node_modules
