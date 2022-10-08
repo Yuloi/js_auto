@@ -1,17 +1,20 @@
 
 function RandomFloat(min,max){
-    return (Math.random() * max - min) + min 
-}
+    let a = ((Math.random() * max - min) + min);
+    let newA = Number(a.toFixed(2));
+    return newA
+};
+
 //task 1 - update code afterwards
-function randomNumber (min, max){
+function randomInt (min, max){
     return cubResult = (Math.floor(Math.random() * (max - min + 1)) + min)
 };
 function playRounds(person1,person2){
     let round = 0;
     for (round; round < 3;){
         round++
-        let rand1 = randomNumber(1,6)
-        let rand2 = randomNumber(1,6)
+        let rand1 = randomInt(1,6)
+        let rand2 = randomInt(1,6)
         person1 = person1 + rand1;
         person2 = person2 + rand2;
         console.log(`Round: ${round} \n\vPlayer 1 got ${rand1} points, total is: ${person1} \nPlayer 2 got ${rand2} points, total is: ${person2} \v`);
@@ -49,8 +52,48 @@ function counterFridaysForPeriod(start, stop){
 };
 
 // task 3
+const resultInteger = [];
+let sumInteger = 0;
+function addSumIntegersforA (startValueInt,counterValueInt) {
+    let a = startValueInt;
+    for (i = 0; i < counterValueInt; i++){
+        if (sumInteger === startValueInt){
+            resultInteger.push(0);
+        }else if(i === (counterValueInt-1)){
+            let lastNum = startValueInt - sumInteger;
+            resultInteger.push(lastNum);
+        }else{
+            let random = randomInt(0, a);
+            a = a - random;
+            resultInteger.push(random);
+            sumInteger = sumInteger + random
+        }
+    };
+    console.log(resultInteger)
+}; 
+const resultFloat = [];
+let sumFloat = 0;
+function addSumFloatforA (startValueFloat,counterValueFloat) {
+    let a = startValueFloat;
+    for (i = 0; i < counterValueFloat; i++){
+        if (sumFloat === startValueFloat){
+            resultFloat.push(0);
+        }else if(i === (counterValueFloat-1)){
+            let lastNum = (startValueFloat - sumFloat).toFixed(2);
+            let fixedNum = Number(lastNum);
+            resultFloat.push(fixedNum);
+        }else{
+            let random = RandomFloat(0, a);
+            a = a - random;
+            resultFloat.push(random);
+            sumFloat = sumFloat + random
+        }
+    };
+    console.log(resultFloat)
+};
 
 
-console.log(RandomFloat(0,20))
 module.exports.game = compareSum;
 module.exports.counterFridaysForPeriod = counterFridaysForPeriod;
+module.exports.addSumIntegersforA = addSumIntegersforA;
+module.exports.addSumFloatforA = addSumFloatforA;
