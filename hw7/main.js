@@ -49,9 +49,8 @@ function counterFridaysForPeriod(start, stop){
     for(start; start<= stop; start++){
         if(start === stop){
             let d = new Date();
-            console.log(d.getMonth)
             let result = countingFridayIn1Year(start,d.getMonth());
-            console.log(d.getMonth())
+            console.log(result)
         }else{
             let result = countingFridayIn1Year(start,12);
             console.log(result);
