@@ -1,11 +1,8 @@
 
-function RandomFloat(min,max){
-    let a = ((Math.random() * max - min) + min);
-    let newA = Number(a.toFixed(2));
-    return newA
-};
+/* 
+TASK 1
+*/
 
-//task 1 - update code afterwards
 function randomInt (min, max){
     return cubResult = (Math.floor(Math.random() * (max - min + 1)) + min)
 };
@@ -25,7 +22,7 @@ function playRounds(person1,person2){
 function compareSum(){
     const players = playRounds(0,0);
     if (players[0] === players[1]){
-        console.log(`Total score is same: ${players[0]}, friendship won :)) `);
+        console.log(`Total score is same: ${players[0]}, draw! :)) `);
     }else if (players[0] > players[1]){
         console.log(`Player 1 won with total score: ${players[0]}`);
     }else{
@@ -33,12 +30,16 @@ function compareSum(){
     };
 };
 
-// task 2
+/* 
+TASK 2
+*/
+
 function countingFridayIn1Year (year){
     let res = [];
     for (month = 0; month < 12; month++){
-        let date = new Date(year, month, 14);
-        if (date.getDay() === 6){
+        let date = new Date(year, month, 13);
+        if (date.getDay() === 5){
+            date = date.toDateString()
             res.push(date);
         };
     }; 
@@ -51,9 +52,20 @@ function counterFridaysForPeriod(start, stop){
     }
 };
 
-// task 3
+
+/* 
+TASK 3
+*/
 const resultInteger = [];
 let sumInteger = 0;
+const resultFloat = [];
+let sumFloat = 0;
+
+function RandomFloat(min,max){
+    let a = ((Math.random() * max - min) + min);
+    let newA = Number(a.toFixed(2));
+    return newA
+};
 function addSumIntegersforA (startValueInt,counterValueInt) {
     let a = startValueInt;
     for (i = 0; i < counterValueInt; i++){
@@ -71,8 +83,6 @@ function addSumIntegersforA (startValueInt,counterValueInt) {
     };
     console.log(resultInteger)
 }; 
-const resultFloat = [];
-let sumFloat = 0;
 function addSumFloatforA (startValueFloat,counterValueFloat) {
     let a = startValueFloat;
     for (i = 0; i < counterValueFloat; i++){
