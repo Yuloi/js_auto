@@ -34,9 +34,9 @@ function compareSum(){
 TASK 2
 */
 
-function countingFridayIn1Year (year){
+function countingFridayIn1Year (year,n){
     let res = [];
-    for (month = 0; month < 12; month++){
+    for (month = 0; month < n; month++){
         let date = new Date(year, month, 13);
         if (date.getDay() === 5){
             date = date.toDateString()
@@ -47,9 +47,16 @@ function countingFridayIn1Year (year){
 };
 function counterFridaysForPeriod(start, stop){
     for(start; start<= stop; start++){
-        let result = countingFridayIn1Year(start);
-        console.log(result);
-    }
+        if(start === stop){
+            let d = new Date();
+            console.log(d.getMonth)
+            let result = countingFridayIn1Year(start,d.getMonth());
+            console.log(d.getMonth())
+        }else{
+            let result = countingFridayIn1Year(start,12);
+            console.log(result);
+        };
+    };
 };
 
 
