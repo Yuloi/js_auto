@@ -1,16 +1,17 @@
-//task 1 - update code afterwards
 
-function randomNumber (){
-    let min = 1;
-    let max = 6;
+function RandomFloat(min,max){
+    return (Math.random() * max - min) + min 
+}
+//task 1 - update code afterwards
+function randomNumber (min, max){
     return cubResult = (Math.floor(Math.random() * (max - min + 1)) + min)
 };
 function playRounds(person1,person2){
     let round = 0;
     for (round; round < 3;){
         round++
-        let rand1 = randomNumber()
-        let rand2 = randomNumber()
+        let rand1 = randomNumber(1,6)
+        let rand2 = randomNumber(1,6)
         person1 = person1 + rand1;
         person2 = person2 + rand2;
         console.log(`Round: ${round} \n\vPlayer 1 got ${rand1} points, total is: ${person1} \nPlayer 2 got ${rand2} points, total is: ${person2} \v`);
@@ -30,8 +31,26 @@ function compareSum(){
 };
 
 // task 2
-const date = new Date();
-let d = date.getFullYear();
-console.log(d);
+function countingFridayIn1Year (year){
+    let res = [];
+    for (month = 0; month < 12; month++){
+        let date = new Date(year, month, 14);
+        if (date.getDay() === 6){
+            res.push(date);
+        };
+    }; 
+    return res;
+};
+function counterFridaysForPeriod(start, stop){
+    for(start; start<= stop; start++){
+        let result = countingFridayIn1Year(start);
+        console.log(result);
+    }
+};
 
+// task 3
+
+
+console.log(RandomFloat(0,20))
 module.exports.game = compareSum;
+module.exports.counterFridaysForPeriod = counterFridaysForPeriod;
