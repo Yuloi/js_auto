@@ -15,6 +15,15 @@ function findMaxInArray(arr) {
     let sortedArr = arr.sort((a, b) => { return b - a })
     return sortedArr[0]
 }
+function findMaxInArrayAlternative(arr){
+    let max = 0;
+    for (i = 0; i < arr.length; i++){
+        if (arr[i] > max){
+            max = arr[i];
+        }else{
+        };
+    };return max
+}
 // TASK 3
 function fibonacciArray(N, M) {
     for (i = 1; i <= N + M; i++) {
@@ -69,9 +78,25 @@ function sortingArray(arr, n = 0){
             return arr.sort((a,b) => b - a);
     };
 };
+// TASK 6
+function uniqArrayFromArray(arr){
+    const newArray = [];
+    for(i = 0; i < arr.length; i++){
+        if (newArray.includes(arr[i]) != true){
+            newArray.push(arr[i]);
+        }else{
+        };
+    };
+    return newArray;
+}
+
+
+
 
 module.exports.reverseArray = reverseArray;
 module.exports.findMaxInArray = findMaxInArray;
 module.exports.fibonacciArray = fibonacciArray;
 module.exports.compareValuesTogether = compareValuesTogether;
 module.exports.sortingArray = sortingArray;
+module.exports.uniqArrayFromArray = uniqArrayFromArray;
+module.exports.findMaxInArrayAlternative = findMaxInArrayAlternative;
