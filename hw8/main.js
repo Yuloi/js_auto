@@ -60,9 +60,17 @@ function compareValuesTogether (a, b){
     console.log(checkValueAndPosition(a, b));
     console.log(checkValuesinArray (a, b));
 }
-
-
+// TASK 5
+function sortingArray(arr, n = 0){
+    switch(n){
+        case 0:
+            return arr.sort((a,b) => a - b)
+        case 1:
+            return arr.sort((a,b) => b - a);
+    };
+};
 module.exports.reverseArray = reverseArray;
 module.exports.findMaxInArray = findMaxInArray;
 module.exports.fibonacciArray = fibonacciArray;
 module.exports.compareValuesTogether = compareValuesTogether;
+module.exports.sortingArray = sortingArray;

@@ -1,7 +1,8 @@
 const {reverseArray, 
     findMaxInArray, 
     fibonacciArray,
-    compareValuesTogether
+    compareValuesTogether,
+    sortingArray
 } = require('./main')
 
 const arr = [1,2,3,4,5,6]
@@ -16,3 +17,7 @@ console.log(findMaxInArray(arr2));
 console.log(fibonacciArray(N,M));
 // TASK 4
 compareValuesTogether(3487,3794)
+/* TASK 5
+by defuult n=0 (sorting asc)
+change n to 1 to sort as desc */
+console.log(sortingArray(arr2))
