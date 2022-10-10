@@ -69,6 +69,7 @@ function sortingArray(arr, n = 0){
             return arr.sort((a,b) => b - a);
     };
 };
+
 module.exports.reverseArray = reverseArray;
 module.exports.findMaxInArray = findMaxInArray;
 module.exports.fibonacciArray = fibonacciArray;
