@@ -69,9 +69,24 @@ function sortingArray(arr, n = 0){
             return arr.sort((a,b) => b - a);
     };
 };
+// TASK 6
+function uniqArrayFromArray(arr){
+    const newArray = [];
+    for(i = 0; i < arr.length; i++){
+        if (newArray.includes(arr[i]) != true){
+            newArray.push(arr[i]);
+        }else{
+        };
+    };
+    return newArray;
+}
+
+
+
 
 module.exports.reverseArray = reverseArray;
 module.exports.findMaxInArray = findMaxInArray;
 module.exports.fibonacciArray = fibonacciArray;
 module.exports.compareValuesTogether = compareValuesTogether;
 module.exports.sortingArray = sortingArray;
+module.exports.uniqArrayFromArray = uniqArrayFromArray;
