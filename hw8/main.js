@@ -73,9 +73,11 @@ function compareValuesTogether (a, b){
 function sortingArray(arr, n = 0){
     switch(n){
         case 0:
-            return arr.sort((a,b) => a - b)
+            return arr.sort((a,b) => a - b);
+        break;
         case 1:
             return arr.sort((a,b) => b - a);
+        break;
     };
 };
 // TASK 6
