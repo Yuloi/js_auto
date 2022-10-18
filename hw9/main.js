@@ -1,6 +1,6 @@
 const getRandomNumber = (min,max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-function getPromisrandomNumber(start,finish,time){
+function getNum(start,finish,time){
     return new Promise((resolve,reject)=> {
         setTimeout(()=> resolve(getRandomNumber(start,finish)),time);
     }).then(value => value)
@@ -20,9 +20,9 @@ const p3 = returnPromisWithValue(3,1,5);
 Promise.race([p1,p2,p3]).then(value => console.log(value)) //promise race
 
 // TASK 2
-const getNum = getPromisrandomNumber(1,5,3000)
+
 async function getSquarOfNum(){
-    const num = await getNum;
+    const num = await getNum(1,5,3000);
     console.log(`square of number ${num} is equal to ${num*num}`)
 };
 getSquarOfNum()
@@ -30,8 +30,8 @@ getSquarOfNum()
 // TASK 3
 
 
-const getNum1 = getPromisrandomNumber(1,5,3000);
-const getNum2 = getPromisrandomNumber(6,10,5000)
+const getNum1 = getNum(1,5,3000);
+const getNum2 = getNum(6,10,5000)
 
 async function getSumOf2Numbers(){
     let num1 = await getNum1;
