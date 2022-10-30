@@ -1,10 +1,13 @@
 export class Airplane {
-    #isFlighting = false
+    isFlighting = false
     constructor(name, maxLoadCapacity){
         this.name = name;
         this.maxLoadCapacity = maxLoadCapacity;
     };
     startFlight(){
-        return this.#isFlighting = true
+        return this.isFlighting = true;
+    }
+    finishFlight(){
+        return this.isFlighting = false;
     }
 }
