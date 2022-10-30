@@ -1,11 +1,10 @@
 import { Passanger} from "./passangerClass.js";
 import { Cargo } from "./cargoClass.js";
-export class airplaneCraftCompanyBuilder {
-    name = 'Free'
+export class AirplaneCraftCompany {
     constructor(){
     }
-    setType(type){
-        this.Type = type;
+    setType(type){ //Commercial or Cargo
+        this.type = type;
         return this;
     };
     setairplaneClass(number){
@@ -23,8 +22,5 @@ export class airplaneCraftCompanyBuilder {
     setName(){
         this.name = `${this.name} ${this.airplaneClass}`;
         return this.name;
-    }
-    build(){
-        return new Cargo(this.setName(),this.maxLoadCapacity)
     }
 };
