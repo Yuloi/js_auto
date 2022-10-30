@@ -2,4 +2,3 @@ export function getRandomNumber(max,min){
     return Math.floor(Math.random() * (max-min)) + min
 }
 
-console.log(getRandomNumber(25,60))

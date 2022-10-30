@@ -1,4 +1,4 @@
-import { Airplane} from "./airplane.js";
+import { Airplane} from "./airplaneClass.js";
 import { getRandomNumber } from "./func.js";
 export class Cargo extends Airplane{
     constructor(name, maxLoadCapacity,flightRange){
