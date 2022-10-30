@@ -1,6 +1,6 @@
 import { AirplaneCraftCompany } from "./aircraftCompanyClass.js";
-import { Cargo } from "./cargoClass.js";
-import { Passanger } from "./passangerClass.js";
+import { Cargo } from "../airplaneClasses/cargoClass.js";
+import { Passanger } from "../airplaneClasses/passangerClass.js";
 export class AirbusBuilder extends AirplaneCraftCompany{
     name = 'Airbus'
     constructor(){

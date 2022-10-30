@@ -1,5 +1,3 @@
-import { Passanger} from "./passangerClass.js";
-import { Cargo } from "./cargoClass.js";
 export class AirplaneCraftCompany {
     constructor(){
     }

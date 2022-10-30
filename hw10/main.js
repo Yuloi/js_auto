@@ -9,14 +9,11 @@ optional
 - setmaxSeats -> for commercial only
 
 */
-import { BoengBuilder } from "./boingBuilder.js";
-import { AirbusBuilder } from "./airbusBuilder.js";
-
+import { BoengBuilder} from "./aircraftCompanyClasses/boingBuilder.js"
+import { AirbusBuilder } from "./aircraftCompanyClasses/airbusBuilder.js"
 
 
 const Boeng123 = new BoengBuilder().setType('cargo').setairplaneClass(123).setmaxLoadCapacity(56000).setflightRange(11000)
 .build()
 const Airbud23 = new AirbusBuilder().setType('commercial').setairplaneClass('A230').setmaxLoadCapacity(340000).setmaxSeats(230).setflightRange(11000)
 .build()
-
-

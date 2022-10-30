@@ -1,4 +1,3 @@
-import { getRandomNumber } from "./func.js";
 export class Airplane {
     constructor(name, maxLoadCapacity,flightRange){
         this.name = name;
