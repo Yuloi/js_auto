@@ -1,4 +1,5 @@
-import { Passanger } from "./passangerClass.js";
+import { Passanger} from "./passangerClass.js";
+import { Cargo } from "./cargoClass.js";
 export class airplaneCraftCompanyBuilder {
     name = 'Free'
     constructor(){
@@ -24,6 +25,6 @@ export class airplaneCraftCompanyBuilder {
         return this.name;
     }
     build(){
-        return new Passanger(this.setName(),this.maxLoadCapacity,this.maxSeats)
+        return new Cargo(this.setName(),this.maxLoadCapacity)
     }
 };
