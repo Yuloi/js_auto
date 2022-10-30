@@ -14,7 +14,9 @@ import { AirbusBuilder } from "./airbusBuilder.js";
 
 
 
-const Boeng123 = new BoengBuilder().setType('cargo').setairplaneClass(123).setmaxSeats(234).setmaxLoadCapacity(4646464).build()
-const Airbud23 = new AirbusBuilder().setType('commercial').setairplaneClass('A230').setmaxLoadCapacity(340000).setmaxSeats(230).build()
+const Boeng123 = new BoengBuilder().setType('cargo').setairplaneClass(123).setmaxLoadCapacity(56000).setflightRange(11000)
+.build()
+const Airbud23 = new AirbusBuilder().setType('commercial').setairplaneClass('A230').setmaxLoadCapacity(340000).setmaxSeats(230).setflightRange(11000)
+.build()
 
 

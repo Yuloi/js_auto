@@ -1,8 +1,11 @@
+import { getRandomNumber } from "./func.js";
 export class Airplane {
-    isFlighting = false
-    constructor(name, maxLoadCapacity){
+    constructor(name, maxLoadCapacity,flightRange){
         this.name = name;
         this.maxLoadCapacity = maxLoadCapacity;
+        this.flightRange = flightRange;
+        this.isFlighting = false
+        
     };
     startFlight(){
         return this.isFlighting = true;

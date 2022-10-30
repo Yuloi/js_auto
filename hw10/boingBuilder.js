@@ -12,9 +12,9 @@ export class BoengBuilder extends AirplaneCraftCompany{
     }
     build(){
         if (this.type === 'commercial'){
-            return new Passanger(this.setName(),this.maxLoadCapacity,this.maxSeats)
+            return new Passanger(this.setName(),this.maxLoadCapacity,this.maxSeats,this.flightRange)
         }else if (this.type === 'cargo'){
-            return new Cargo(this.setName(),this.maxLoadCapacity)
+            return new Cargo(this.setName(),this.maxLoadCapacity,this.flightRange)
         }
     }
 }

@@ -23,4 +23,8 @@ export class AirplaneCraftCompany {
         this.name = `${this.name} ${this.airplaneClass}`;
         return this.name;
     }
+    setflightRange(number){
+        this.flightRange = number
+        return this;
+    }
 };
