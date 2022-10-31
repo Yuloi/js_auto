@@ -37,4 +37,12 @@ export class Aviacompany {
         b.flightRange - a.flightRange
         )
     }
+    filterPlanesByParam(sortingParam, value){
+        switch(sortingParam){
+            case 'name':
+                let res = this.listOfPlanes.filter((plane) => plane.name.toLowerCase().includes(value.toLowerCase()));
+                return res
+            break;
+        }
+    }
 }

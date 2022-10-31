@@ -12,9 +12,9 @@ export class AirbusBuilder extends AirplaneCraftCompany{
     }
     build(){
         if (this.type === 'commercial'){
-            return new Passanger(this.setName(),this.maxLoadCapacity,this.maxSeats,this.flightRange)
+            return new Passanger(this.setName(),this.maxLoadCapacity,this.maxSeats,this.flightRange,this.type)
         }else if (this.type === 'cargo'){
-            return new Cargo(this.setName(),this.maxLoadCapacity,this.flightRange)
+            return new Cargo(this.setName(),this.maxLoadCapacity,this.flightRange,this.type)
         }
     }
 }

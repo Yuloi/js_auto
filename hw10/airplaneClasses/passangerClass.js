@@ -1,8 +1,8 @@
 import { Airplane} from "./airplaneClass.js";
 import { getRandomNumber } from "../func.js";
 export class Passanger extends Airplane{
-    constructor(name, maxLoadCapacity, maxSeats,flightRange){
-        super(name,maxLoadCapacity,flightRange)
+    constructor(name, maxLoadCapacity, maxSeats,flightRange,type){
+        super(name,maxLoadCapacity,flightRange,type)
         this.maxSeats = maxSeats;
         this.passangersOnboard = 0;
     }

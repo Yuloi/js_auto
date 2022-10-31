@@ -37,7 +37,11 @@ const easyJet = new Aviacompany('EasyJet', 5)
 klm.addPlane([boeng737,boeng747MAX,airbusA350])
 easyJet.addPlane([airbusA230,boeng777])
 
-console.log(klm.getAllLoadCapacity())
+/* console.log(klm.getAllLoadCapacity())
 console.log(easyJet.getAllSeatCapacity())
-console.log(klm.sortPlanesByFlightRange())
+console.log(klm.sortPlanesByFlightRange()) */
+
+console.log(klm.filterPlanesByParam('name', 'Boeng'))
+
+
 
