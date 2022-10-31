@@ -4,11 +4,15 @@ export class Aviacompany {
         this.maxAirplanes = maxAirplanes;
         this.listOfPlanes = []
     }
-    addPlane(plane){
-        this.listOfPlanes.push(plane)
+    addPlane(a =[]){
+        for(let i = 0; i < a.length; i++){
+        this.listOfPlanes.push(a[i])
+        }
     }
-    removePlane(plane){
-        this.listOfPlanes.pop(plane)
+    removePlane(a =[]){
+        for(let i = 0; i < a.length; i++){
+            this.listOfPlanes.pop(a[i])
+            }
     }
     getAllLoadCapacity(){
         let res = 0;
