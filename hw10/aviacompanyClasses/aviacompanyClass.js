@@ -39,7 +39,7 @@ export class Aviacompany {
     }
     filterPlanesByParam(sortingParam, value){
         switch(sortingParam){
-            case 'name':
+            case 'name' || 'type':
                 let res = this.listOfPlanes.filter((plane) => plane.name.toLowerCase().includes(value.toLowerCase()));
                 return res
             break;
