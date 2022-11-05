@@ -13,7 +13,7 @@ optional
 import { BoengBuilder} from "./aircraftCompanyClasses/boingBuilder.js"
 import { AirbusBuilder } from "./aircraftCompanyClasses/airbusBuilder.js"
 import { Aviacompany } from "./aviacompanyClasses/aviacompanyClass.js"
-import { searchPlainsInCompanyByParams } from "./func.js"
+import { returnMatchedPlainsByParams } from "./func.js"
 
 
 const boeng737 = new BoengBuilder().setType('cargo').setairplaneClass(737)
@@ -45,4 +45,4 @@ console.log(easyJet.getAllSeatCapacity())
 
 console.log(klm.sortPlanesByFlightRange())
 
-console.log(searchPlainsInCompanyByParams(easyJet,{maxSeats:230,isFlighting: false}))
+console.log(returnMatchedPlainsByParams(easyJet.listOfPlanes,{maxSeats:230,isFlighting: false}))
