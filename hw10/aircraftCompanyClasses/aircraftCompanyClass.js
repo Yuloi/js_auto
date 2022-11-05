@@ -2,7 +2,7 @@ export class AirplaneCraftCompany {
     constructor(){
     }
     setType(type){ //Commercial or Cargo
-        this.type = type;
+        this.type = type.toLowerCase();
         return this;
     };
     setairplaneClass(number){

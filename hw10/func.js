@@ -14,12 +14,11 @@ export function searchSinglePlain(plain, searchParams){
     }
 
 }
-export function searchPlainsInCompanyByParams(companyName,searchParams){
-    let listOfPlanes = companyName.listOfPlanes
+export function returnMatchedPlainsByParams(plainList,searchParams){
     let sortedListOfPlains = [];
-    for (let i = 0; i < listOfPlanes.length; i++){
-        if (searchSinglePlain(listOfPlanes[i], searchParams)){
-            sortedListOfPlains.push(listOfPlanes[i])
+    for (let i = 0; i < plainList.length; i++){
+        if (searchSinglePlain(plainList[i], searchParams)){
+            sortedListOfPlains.push(plainList[i])
         }
     }return sortedListOfPlains
 }
