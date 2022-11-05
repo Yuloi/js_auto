@@ -30,19 +30,11 @@ export class Aviacompany {
                 res += this.listOfPlanes[i].maxSeats
             }
         }
-        return res
+        return `max seats for all planes is ${res}`
     }
     sortPlanesByFlightRange(){
         return this.listOfPlanes.sort((a,b) =>
         b.flightRange - a.flightRange
         )
-    }
-    filterPlanesByParam(sortingParam, value){
-        switch(sortingParam){
-            case 'name' || 'type':
-                let res = this.listOfPlanes.filter((plane) => plane.name.toLowerCase().includes(value.toLowerCase()));
-                return res
-            break;
-        }
     }
 }
