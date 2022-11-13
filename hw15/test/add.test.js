@@ -33,10 +33,6 @@ describe('Testing Add method from calculator class', function() {
 			let result = calc.add(0);
 			expect(result).to.be.equal(0);
 		});
-		it('Function is able to sum zero and float', function(){
-			let result = calc.add(0,0.34);
-			expect(result).to.be.equal(0.34);
-		});
 		it('Function is able to sum zero and positive float', function(){
 			let result = calc.add(0,0.34);
 			expect(result).to.be.equal(0.34);
@@ -65,13 +61,17 @@ describe('Testing Add method from calculator class', function() {
 			let result = calc.add(1,2);
 			expect(result).to.be.a('number');
 		});
+		it('Function is returning result for int as type number', async function() {
+			let result = calc.add(1.12,2.345);
+			expect(result).to.be.a('number');
+		});
 	});
 	describe('Negative cases for Add method', function() {
 		it('Function is able to return correct result when params passed as array', async function() {
 			let result = calc.add([1,2]);
 			expect(result).to.be.equal(3);
 		});
-		it('Function is able to return correct result with with actions inside brackets', async function() {
+		it('Function is able to return correct result with actions inside brackets', async function() {
 			let result = calc.add((1+2),3);
 			expect(result).to.be.equal(6);
 		});
