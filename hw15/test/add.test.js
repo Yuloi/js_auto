@@ -83,5 +83,9 @@ describe('Testing Add method from calculator class', function() {
 			let result = calc.add(.10, .10);
 			expect(result).to.be.equal(0.20);
 		});
+		it('Function is returning 0 when no params passed', async function() {
+			let result = calc.add();
+			expect(result).to.be.equal(0);
+		});
 	});
 });
