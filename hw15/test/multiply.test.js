@@ -9,47 +9,47 @@ describe('Testing Multiply method from calculator class', function () {
 			let result = calc.multiply(4,3);
 			expect(result).to.be.equal(12);
 		});
-		it('Function is able to multiply two negative integers',async function (){
+		it('Function is able to multiply two negative integers', async function (){
 			let result = calc.multiply(-10, -4);
 			expect(result).to.equal(40);
 		});
-		it('Function is able to multiply positive int and negative int',async function (){
+		it('Function is able to multiply positive int and negative int', async function (){
 			let result = calc.multiply(5,-2);
 			expect(result).to.be.equal(-10);
 		});
-		it('Function is able to multiply two positive float with the same amount of numbers after dot',async function (){
+		it('Function is able to multiply two positive float with the same amount of numbers after dot', async function (){
 			let result = calc.multiply(4.28, 0.14);
 			expect(result).to.be.equal(0.5992);
 		});
-		it('Function is able to multiply two negative float with different amount of numbers after dot',async function (){
+		it('Function is able to multiply two negative float with different amount of numbers after dot', async function (){
 			let result = calc.multiply(-10.2,-2.51);
 			expect(result).to.be.equal(25.602);
 		});
-		it('Function is able to multiply negative float and positive int',async function (){
+		it('Function is able to multiply negative float and positive int', async function (){
 			let result = calc.multiply(-0.98, 11);
 			expect(result).to.be.equal(-10.78);
 		});
-		it('Function is able to multiply zero',async function (){
+		it('Function is able to multiply zero', async function (){
 			let result = calc.multiply(0);
 			expect(result).to.be.equal(0);
 		});
-		it('Function is able to multiply zero and positive float',async function (){
+		it('Function is able to multiply zero and positive float', async function (){
 			let result = calc.multiply(0,0.3434);
 			expect(result).to.be.equal(0);
 		});
-		it('Function is able to multiply zero and negative float',async function (){
+		it('Function is able to multiply zero and negative float', async function (){
 			let result = calc.multiply(-14.980, 0);
 			expect(result).to.be.equal(0);
 		});
-		it('Function is able to multiply zero and positive int',async function (){
+		it('Function is able to multiply zero and positive int', async function (){
 			let result = calc.multiply(0,10);
 			expect(result).to.be.equal(0);
 		});
-		it('Function is able to multiply zero and negative int',async function (){
+		it('Function is able to multiply zero and negative int', async function (){
 			let result = calc.multiply(0,-1);
 			expect(result).to.be.equal(0);
 		});
-		it('Function is able to multiply multiple floats',async function (){
+		it('Function is able to multiply multiple floats', async function (){
 			let result = calc.multiply(0.10, -0.15, 5.12);
 			expect(result).to.be.equal(-0.0768);
 		});
