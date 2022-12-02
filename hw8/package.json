@@ -1,0 +1,11 @@
+{
+  "name": "homework8",
+  "version": "1.0.0",
+  "description": "project for homework 8",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yuliya Kazakevich",
+  "license": "ISC"
+}

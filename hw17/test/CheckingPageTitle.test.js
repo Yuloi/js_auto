@@ -1,4 +1,4 @@
-const {Builder, By} = require('selenium-webdriver');
+const {Builder, By, until} = require('selenium-webdriver');
 /* const chrome = require('selenium-webdriver/chrome');
 const service = new chrome.ServiceBuilder('/usr/local/bin/chromedriver'); */
 const chai = require('chai');
@@ -18,6 +18,7 @@ describe('Checking title for pages -  Main and Chrome Extensions', function(){
         let homePageTitle = await driver.getTitle();
         expect(homePageTitle).to.equal('ChromeDriver - WebDriver for Chrome');
         let chromeExtentionButton = await driver.findElement(By.css('.jgXgSe.HlqNPb[href="/extensions"]'));
+        await driver.wait(until.elementIsVisible(chromeExtentionButton))
         await chromeExtentionButton.click()
         let extentionPageTitle = await driver.getTitle()
         expect(extentionPageTitle).to.equal('ChromeDriver - WebDriver for Chrome - Chrome Extensions');

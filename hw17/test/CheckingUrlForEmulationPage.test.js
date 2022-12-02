@@ -16,6 +16,7 @@ describe('Checking title for pages -  Main and Chrome Extensions', function(){
     it('Mobile Emulation url includes /mobile-emulation', async function (){
         await driver.get('https://chromedriver.chromium.org/home')
         const moreButton = await driver.findElement(By.xpath('//*[text()="More"]'))
+        await driver.wait(until.elementIsVisible(moreButton))
         await driver.actions({async:true}).move({origin:moreButton}).perform()
         const emulatorPage = await driver.findElement(By.xpath('//li[@class="VsJjtf oXBWEc"]//a[text()="Mobile Emulation"]'));
         await driver.wait(until.elementIsVisible(emulatorPage))
