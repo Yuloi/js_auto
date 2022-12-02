@@ -6,3 +6,4 @@
 **/.eslintrc.js
 **/.eslintrc.json
 **/tsconfig.json
+**/mochawesome-report/assets/
