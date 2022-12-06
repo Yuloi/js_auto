@@ -6,4 +6,6 @@
 **/.eslintrc.js
 **/.eslintrc.json
 **/tsconfig.json
-**/mochawesome-report/assets/
+**/mochawesome-report
+**/package.json
+**/package-lock.json
