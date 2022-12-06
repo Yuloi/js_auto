@@ -7,5 +7,3 @@
 **/.eslintrc.json
 **/tsconfig.json
 **/mochawesome-report
-**/package.json
-**/package-lock.json
