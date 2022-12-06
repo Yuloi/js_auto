@@ -9,8 +9,11 @@ describe('Checking title for pages -  Main and Chrome Extensions', function(){
     beforeEach(async function(){
         driver = await new Builder().forBrowser('chrome').build();
     })
+    afterEach(async function(){
+        await driver.close();
+    })
     after(async function(){
-        await driver.quit()
+        await driver.quit();
     })
 
     it('Main page title is changing after swithing pages', async function (){
@@ -22,5 +25,6 @@ describe('Checking title for pages -  Main and Chrome Extensions', function(){
         await chromeExtentionButton.click()
         let extentionPageTitle = await driver.getTitle()
         expect(extentionPageTitle).to.equal('ChromeDriver - WebDriver for Chrome - Chrome Extensions');
+        await driver.sleep()
     })
 })

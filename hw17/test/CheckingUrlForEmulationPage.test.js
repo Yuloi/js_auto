@@ -4,13 +4,16 @@ const service = new chrome.ServiceBuilder('/usr/local/bin/chromedriver');
 const chai = require('chai');
 const expect = chai.expect
 
-describe('Checking title for pages -  Main and Chrome Extensions', function(){
+describe('Mobile Emulation page has correct attributes', function(){
     let driver;
     beforeEach(async function(){
         driver = await new Builder().forBrowser('chrome').build();
     })
+    afterEach(async function(){
+        await driver.close();
+    })
     after(async function(){
-        await driver.quit()
+        await driver.quit();
     })
 
     it('Mobile Emulation url includes /mobile-emulation', async function (){
