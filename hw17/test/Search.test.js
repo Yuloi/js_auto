@@ -25,7 +25,7 @@ describe('Search should include search keyword', function(){
         await driver.wait(until.elementIsVisible(searchField))
         await searchField.click()
         await searchField.sendKeys('driver' + Key.ENTER);
-        await driver.sleep(500)
+        await driver.sleep(1000)
         const searchResultList = await driver.findElement(By.css(".DLXGJd"))
         await driver.wait(until.elementIsVisible(searchResultList))
         const searchResultFirstResult = await driver.findElement(By.xpath("//*[@class=\"lZsZxe\"]//div[@class=\"vH0yjd\" and a[@data-position=\"1\"]]/div[1]/b")).getText()
